@@ -13,14 +13,17 @@ export class AppComponent {
     {
       id: 'ph1',
       name: 'Student 1',
+      status: 0
     },
     {
       id: 'ph2',
       name: 'Student 2',
+      status: 1
     },
     {
       id: 'ph3',
       name: 'Student 3',
+      status: 0
     },
   ]
 }

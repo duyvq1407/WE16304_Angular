@@ -327,6 +327,24 @@
 
 <div class="content" role="main">
 
+  <div>
+    <table border="1" >
+      <tr>
+        <th>Mã SV</th>
+        <th>Họ tên</th>
+        <th>Trạng thái</th>
+      </tr>
+      <tr *ngFor="let student of students">
+        <td>{{student.id}}</td>
+        <td>{{student.name}}</td>
+        <td>
+          <span class="color-green" *ngIf="student.status === 0">Online</span>
+          <span class="color-gray" *ngIf="student.status === 1">Offline</span>
+        </td>
+      </tr>
+    </table>
+  </div><br><br>
+
   <!-- Highlight Card -->
   <div class="card highlight-card card-small">
 
