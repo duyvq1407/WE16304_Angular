@@ -7,4 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'WE16304_Angular';
+  name = 'Duyvqph18088';
+  age = '18';
+  students = [
+    {
+      id: 'ph1',
+      name: 'Student 1',
+    },
+    {
+      id: 'ph2',
+      name: 'Student 2',
+    },
+    {
+      id: 'ph3',
+      name: 'Student 3',
+    },
+  ]
 }
