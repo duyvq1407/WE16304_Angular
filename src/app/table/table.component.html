@@ -16,7 +16,7 @@
         <td>{{teacher.age}}</td>
         <td><app-table-gender [gender]="teacher.gender"></app-table-gender></td>
         <!-- <td><img src={{teacher.avatar}} width="100"></td> -->
-        <td><img [src]='teacher.avatar' width="100"></td>
+        <td><app-table-avatar [avatar]="teacher.avatar" [age]="teacher.age"></app-table-avatar></td>
         <td>
             <app-table-status [status]="teacher.status"></app-table-status>
         </td>

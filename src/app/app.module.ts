@@ -10,6 +10,7 @@ import { TableGenderComponent } from './table/table-gender/table-gender.componen
 import { TableStatusComponent } from './table/table-status/table-status.component';
 import { NameComponent } from './name/name.component';
 import { IdentityComponent } from './identity/identity.component';
+import { TableAvatarComponent } from './table/table-avatar/table-avatar.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { IdentityComponent } from './identity/identity.component';
     TableGenderComponent,
     TableStatusComponent,
     NameComponent,
-    IdentityComponent
+    IdentityComponent,
+    TableAvatarComponent
   ],
   imports: [
     BrowserModule,

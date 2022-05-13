@@ -31,7 +31,7 @@ export class AppComponent {
     {
       id: 'PH1234',
       name: 'Teacher 1',
-      age: 20,
+      age: 40,
       gender: 0,
       avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxekghgcizx9iOtfgMfM7Ln4keSFjAQk7trQ&usqp=CAU",
       status: 0
@@ -41,16 +41,32 @@ export class AppComponent {
       name: 'Teacher 2',
       age: 20,
       gender: 1,
-      avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxekghgcizx9iOtfgMfM7Ln4keSFjAQk7trQ&usqp=CAU",
-      status: 1
+      avatar: "https://nhattientuu.com/wp-content/uploads/2020/08/tai-hinh-anh-de-thuong-cute-lam-hinh-nen-dien-thoai-1.jpg",
+      status: 0
     },
     {
       id: 'PH3234',
       name: 'Teacher 3',
-      age: 20,
+      age: 30,
       gender: 0,
       avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxekghgcizx9iOtfgMfM7Ln4keSFjAQk7trQ&usqp=CAU",
-      status: 0
-    }
+      status: 1
+    },
+    {
+      id: 'PH4234',
+      name: 'Teacher 4',
+      age: 35,
+      gender: 1,
+      avatar: "https://nhattientuu.com/wp-content/uploads/2020/08/tai-hinh-anh-de-thuong-cute-lam-hinh-nen-dien-thoai-1.jpg",
+      status: 1
+    },
+    // {
+    //   id: 'PH5234',
+    //   name: 'Teacher 5',
+    //   age: 25,
+    //   gender: 1,
+    //   avatar: "https://nhattientuu.com/wp-content/uploads/2020/08/tai-hinh-anh-de-thuong-cute-lam-hinh-nen-dien-thoai-1.jpg",
+    //   status: 0
+    // }
   ]
 }
