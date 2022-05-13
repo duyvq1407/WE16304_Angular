@@ -69,4 +69,18 @@ export class AppComponent {
     //   status: 0
     // }
   ]
+  schoolName = '';
+  clickH2 = () => {
+    console.log(1)
+    this.schoolName = this.schoolName === '' ? 'Poly' : ''
+  }
+  showStatus = true
+  changeTableStatus = () => {
+    this.showStatus = !this.showStatus
+  }
+  inputValue = ''
+  changeInput = (event: any) => {
+    this.inputValue = event.target.value
+    console.log(event.target.value)
+  }
 }
