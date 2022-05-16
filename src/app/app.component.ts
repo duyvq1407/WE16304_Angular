@@ -29,7 +29,7 @@ export class AppComponent {
   ]
   teachers = [
     {
-      id: 'PH1234',
+      id: 1,
       name: 'Teacher 1',
       age: 40,
       gender: 0,
@@ -37,7 +37,7 @@ export class AppComponent {
       status: 0
     },
     {
-      id: 'PH2234',
+      id: 2,
       name: 'Teacher 2',
       age: 20,
       gender: 1,
@@ -45,7 +45,7 @@ export class AppComponent {
       status: 0
     },
     {
-      id: 'PH3234',
+      id: 3,
       name: 'Teacher 3',
       age: 30,
       gender: 0,
@@ -53,21 +53,13 @@ export class AppComponent {
       status: 1
     },
     {
-      id: 'PH4234',
+      id: 4,
       name: 'Teacher 4',
       age: 35,
       gender: 1,
       avatar: "https://nhattientuu.com/wp-content/uploads/2020/08/tai-hinh-anh-de-thuong-cute-lam-hinh-nen-dien-thoai-1.jpg",
       status: 1
     },
-    // {
-    //   id: 'PH5234',
-    //   name: 'Teacher 5',
-    //   age: 25,
-    //   gender: 1,
-    //   avatar: "https://nhattientuu.com/wp-content/uploads/2020/08/tai-hinh-anh-de-thuong-cute-lam-hinh-nen-dien-thoai-1.jpg",
-    //   status: 0
-    // }
   ]
   schoolName = '';
   clickH2 = () => {
@@ -76,11 +68,39 @@ export class AppComponent {
   }
   showStatus = true
   changeTableStatus = () => {
-    this.showStatus = !this.showStatus
+    this.showStatus = !this.showStatus                    
   }
-  inputValue = ''
-  changeInput = (event: any) => {
-    this.inputValue = event.target.value
-    console.log(event.target.value)
+  inputValues = {
+    name: '',
+    age: '',
+    gender: '1',
+    avatar: '',
+    status: '0'
+  };
+  // onInputName = (event: any, info: string) => {
+  //   this.inputValues.name = event.target.value
+  // }
+  // onInputAge = (event: any, info: string) => {
+  //   this.inputValues.age = event.target.value
+  // }
+
+  onInput = (event: any, key: 'name' | 'age' | 'gender' | 'avatar' | 'status') => {
+    this.inputValues[key] = event.target.value
+  }
+  onSubmit = () => {
+    this.teachers.push({
+       ...this.inputValues,
+       age: +this.inputValues.age,
+       gender: +this.inputValues.gender,
+       status: +this.inputValues.status,
+       id: this.teachers.length + 1
+      })
+    this.inputValues = {
+      name: '',
+      age: '',
+      gender: '1',
+      avatar: '',
+      status: '0'
+    }
   }
 }
