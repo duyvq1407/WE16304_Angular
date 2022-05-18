@@ -1,10 +1,14 @@
 <div class="container">
   <div>
+    <h3>Angular Form</h3>
+    <app-form></app-form>
+  </div>
+  <div>
     <h2 (click)="clickH2()" class="c">Danh sách giảng viên {{schoolName}}</h2><br><br>
     <button class="btn btn-primary" (click)="changeTableStatus()">{{showStatus ? 'Ẩn' : 'Hiện'}} bảng</button>
     <app-table class="{{showStatus ? 'd-block' : 'd-none'}}" [users] = 'teachers'></app-table>
   </div>
-  <div>
+  <div class="d-none">
     <h3>Thêm sản phẩm</h3>
     <form action="">
       <div class="form-group mt-2">
