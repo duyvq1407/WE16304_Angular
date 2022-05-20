@@ -3,7 +3,7 @@
     <h3>Angular Form</h3>
     <app-form></app-form>
   </div>
-  <div>
+  <div class="d-none">
     <h2 (click)="clickH2()" class="c">Danh sách giảng viên {{schoolName}}</h2><br><br>
     <button class="btn btn-primary" (click)="changeTableStatus()">{{showStatus ? 'Ẩn' : 'Hiện'}} bảng</button>
     <app-table class="{{showStatus ? 'd-block' : 'd-none'}}" [users] = 'teachers'></app-table>
@@ -50,7 +50,7 @@
       <button type="button" (click)="onSubmit()" class="btn btn-primary mt-2">Submit</button>
     </form>
   </div>
-  <div>
+  <div class="d-none">
     <h4>Tên sinh viên: <app-name [name] = "name"></app-name></h4>
     <h4>Mã sinh viên: <app-identity [identity] = "identity"></app-identity></h4>
   </div>
