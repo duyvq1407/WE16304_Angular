@@ -1,0 +1,25 @@
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Avatar</th>
+        <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let teacher of teachers">
+        <td>{{teacher.id}}</td>
+        <td><app-table-name [name]="teacher.name"></app-table-name></td>
+        <td>{{teacher.age}}</td>
+        <td><app-table-gender [gender]="teacher.gender"></app-table-gender></td>
+        <!-- <td><img src={{teacher.avatar}} width="100"></td> -->
+        <td><app-table-avatar [avatar]="teacher.avatar" [age]="teacher.age"></app-table-avatar></td>
+        <td>
+            <app-table-status [status]="teacher.status"></app-table-status>
+        </td>
+        </tr>
+    </tbody>
+    </table>
