@@ -53,7 +53,7 @@ export class FormComponent implements OnInit {
     const newId = userIds[userIds.length - 1]+1;
     // Thêm vào bảng
     const FormData = userForm.value// Lấy giá trị của form
-    if (this.inputValues.id === 0) { // nêú id của input values = 0 thì thêm khác 0 thì sửa
+    if (this.inputValues.id === 0) { // nêú id của inputValues = 0 thì thêm, khác 0 thì sửa
       //Thêm sản phẩm
       this.users.push({
         ...FormData, 
@@ -62,14 +62,8 @@ export class FormComponent implements OnInit {
       })
     } else {
       // Chỉnh sửa
-      console.log(11)
-      this.users.map((item) => {
-        if (item.id === this.inputValues.id) {
-          console.log(item)
-          item = {...FormData, id: this.inputValues.id};
-          console.log(1)
-        }
-      })
+      this.users = this.users.map((item) => item.id === this.inputValues.id ? {...FormData, id: item.id} : item)
+      console.log(this.users)
     }
     userForm.resetForm({
       name: '',
