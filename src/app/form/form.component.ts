@@ -19,7 +19,7 @@ export class FormComponent implements OnInit {
       age: 20,
       email: "user1@fpt.vn",
       sdt: "0975382918",
-      avatar: "https://i.pinimg.com/236x/a8/42/df/a842df09346e918d6df4962026957178.jpg"
+      avatar: "https://i.pinimg.com/236x/2e/d5/8f/2ed58f81f11e527c2023dfa7f5a49b4d.jpg"
     },
     {
       id: 12,
@@ -27,7 +27,7 @@ export class FormComponent implements OnInit {
       age: 30,
       email: "user2@fpt.vn",
       sdt: "0975382918",
-      avatar: "https://i.pinimg.com/236x/a8/42/df/a842df09346e918d6df4962026957178.jpg"
+      avatar: "https://i.pinimg.com/236x/8c/b2/12/8cb21278494759a04c6d46834b83c1d1.jpg"
     },
     {
       id: 2,
@@ -35,7 +35,7 @@ export class FormComponent implements OnInit {
       age: 45,
       email: "user3@fpt.vn",
       sdt: "0975382918",
-      avatar: "https://i.pinimg.com/236x/a8/42/df/a842df09346e918d6df4962026957178.jpg"
+      avatar: "https://i.pinimg.com/236x/35/b9/77/35b9775a6445e4295065b39b0e92eb66.jpg"
     }
   ]
   inputValues = {
