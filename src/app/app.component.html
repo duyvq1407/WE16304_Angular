@@ -1,57 +1,7 @@
 <div class="container">
   <div>
     <h3>Angular Form</h3>
-    <app-form></app-form>
-  </div>
-  <div class="d-none">
-    <h2 (click)="clickH2()" class="c">Danh sách giảng viên {{schoolName}}</h2><br><br>
-    <button class="btn btn-primary" (click)="changeTableStatus()">{{showStatus ? 'Ẩn' : 'Hiện'}} bảng</button>
-    <app-table class="{{showStatus ? 'd-block' : 'd-none'}}" [users] = 'teachers'></app-table>
-  </div>
-  <div class="d-none">
-    <h3>Thêm sản phẩm</h3>
-    <form action="">
-      <div class="form-group mt-2">
-        <label for="">Tên GV</label>
-        <input type="text" class="form-control" (input)="onInput($event, 'name')" [value]="inputValues.name">
-      </div>
-      <div class="form-group mt-2">
-        <label for="">Tuổi GV</label>
-        <input type="number" class="form-control" (input)="onInput($event, 'age')" [value]="inputValues.age">
-      </div>
-      <div class="form-group mt-2">
-        <label for="">Giới tính</label>
-        <br>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="gender" (input)="onInput($event, 'gender')"  value="1" [checked]="inputValues.gender === '1'">
-          <label class="form-check-label mx-1">Nam</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="gender" (input)="onInput($event, 'gender')"  value="0">
-          <label class="form-check-label mx-1">Nữ</label>
-        </div>
-      </div>
-      <div class="form-group mt-2">
-        <label for="">Trạng thái</label>
-        <br>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" (input)="onInput($event, 'status')" name="status" value="0" [checked]="inputValues.status === '0'">
-          <label class="form-check-label mx-1">Đã nghỉ</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" (input)="onInput($event, 'status')" name="status" value="1">
-          <label class="form-check-label mx-1">Đang làm việc</label>
-        </div>
-      </div>
-      <div class="form-group mt-2">
-        <label for="">Ảnh</label>
-        <input type="text" class="form-control" (input)="onInput($event, 'avatar')" [value]="inputValues.avatar">
-      </div>
-      <button type="button" (click)="onSubmit()" class="btn btn-primary mt-2">Submit</button>
-    </form>
-  </div>
-  <div class="d-none">
-    <h4>Tên sinh viên: <app-name [name] = "name"></app-name></h4>
-    <h4>Mã sinh viên: <app-identity [identity] = "identity"></app-identity></h4>
+    <!-- <app-form></app-form> -->
+    <app-user></app-user>
   </div>
 </div>

@@ -1,0 +1,29 @@
+<div class="container">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email</th>
+                <th>SĐT</th>
+                <th>Avatar</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{user.id}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.age}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.sdt}}</td>
+                <td><img width="70" [src]="user.avatar" alt=""></td>
+                <td>
+                    <button class="btn btn-primary mx-2" (click)="onEdit(user.id)">Edit</button>
+                    <button class="btn btn-danger" (click)="onRemove(user.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
