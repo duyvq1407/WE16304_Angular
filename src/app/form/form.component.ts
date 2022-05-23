@@ -78,7 +78,6 @@ export class FormComponent implements OnInit {
   }
   onEdit = (userId : number) => {
     const editUser = this.users.find(item => item.id === userId)
-    console.log(editUser)
     if(editUser){
       this.inputValues = {...editUser}
     }
