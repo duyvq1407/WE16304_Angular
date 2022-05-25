@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IdentityComponent } from './identity.component';
+import { LayoutClientComponent } from './layout-client.component';
 
-describe('IdentityComponent', () => {
-  let component: IdentityComponent;
-  let fixture: ComponentFixture<IdentityComponent>;
+describe('LayoutClientComponent', () => {
+  let component: LayoutClientComponent;
+  let fixture: ComponentFixture<LayoutClientComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ IdentityComponent ]
+      declarations: [ LayoutClientComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(IdentityComponent);
+    fixture = TestBed.createComponent(LayoutClientComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -8,15 +8,16 @@ import { TableComponent } from './table/table.component';
 import { TableNameComponent } from './table/table-name/table-name.component';
 import { TableGenderComponent } from './table/table-gender/table-gender.component';
 import { TableStatusComponent } from './table/table-status/table-status.component';
-import { NameComponent } from './name/name.component';
-import { IdentityComponent } from './identity/identity.component';
 import { TableAvatarComponent } from './table/table-avatar/table-avatar.component';
 import { FormsModule } from '@angular/forms';
-import { FormComponent } from './form/form.component';
+import { FormComponent } from './components/form/form.component';
 import { ShowValidateComponent } from './components/show-validate/show-validate.component';
 import { UserComponent } from './user/user.component';
 import { UserFormComponent } from './user/user-form/user-form.component';
 import { UserListComponent } from './user/user-list/user-list.component';
+import { HeaderComponent } from './components/header/header.component';
+import { HomeComponent } from './pages/home/home.component';
+import { LayoutClientComponent } from './layout/layout-client/layout-client.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,14 +25,15 @@ import { UserListComponent } from './user/user-list/user-list.component';
     TableNameComponent,
     TableGenderComponent,
     TableStatusComponent,
-    NameComponent,
-    IdentityComponent,
     TableAvatarComponent,
     FormComponent,
     ShowValidateComponent,
     UserComponent,
     UserFormComponent,
-    UserListComponent
+    UserListComponent,
+    HeaderComponent,
+    HomeComponent,
+    LayoutClientComponent
   ],
   imports: [
     BrowserModule,
