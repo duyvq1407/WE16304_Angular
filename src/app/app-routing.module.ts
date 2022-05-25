@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormComponent } from './components/form/form.component';
-import { LayoutClientComponent } from './layout/layout-client/layout-client.component';
-import { HomeComponent } from './pages/home/home.component';
-import { UserFormComponent } from './user/user-form/user-form.component';
-import { UserListComponent } from './user/user-list/user-list.component';
-import { UserComponent } from './user/user.component';
+import { LayoutClientComponent } from './pages/layout/layout-client/layout-client.component';
+import { UserFormComponent } from './pages/user/user-form/user-form.component';
+import { UserListComponent } from './pages/user/user-list/user-list.component';
+import { UserComponent } from './pages/user/user.component';
 
 const routes: Routes = [
   {
