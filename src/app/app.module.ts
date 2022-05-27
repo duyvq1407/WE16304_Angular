@@ -18,6 +18,8 @@ import { UserListComponent } from './pages/user/user-list/user-list.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LayoutClientComponent } from './pages/layout/layout-client/layout-client.component';
+import { LayoutAdminComponent } from './pages/layout/layout-admin/layout-admin.component';
+import { HeaderAdminComponent } from './components/header-admin/header-admin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +35,9 @@ import { LayoutClientComponent } from './pages/layout/layout-client/layout-clien
     UserListComponent,
     HeaderComponent,
     HomeComponent,
-    LayoutClientComponent
+    LayoutClientComponent,
+    LayoutAdminComponent,
+    HeaderAdminComponent
   ],
   imports: [
     BrowserModule,
