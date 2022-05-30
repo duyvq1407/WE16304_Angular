@@ -16,10 +16,13 @@ import { UserComponent } from './pages/user/user.component';
 import { UserFormComponent } from './pages/user/user-form/user-form.component';
 import { UserListComponent } from './pages/user/user-list/user-list.component';
 import { HeaderComponent } from './components/header/header.component';
-import { HomeComponent } from './pages/home/home.component';
 import { LayoutClientComponent } from './pages/layout/layout-client/layout-client.component';
 import { LayoutAdminComponent } from './pages/layout/layout-admin/layout-admin.component';
 import { HeaderAdminComponent } from './components/header-admin/header-admin.component';
+import { AdminProductListComponent } from './pages/admin-product/admin-product-list/admin-product-list.component';
+import { AdminProductFormComponent } from './pages/admin-product/admin-product-form/admin-product-form.component';
+import { AdminProductDetailComponent } from './pages/admin-product/admin-product-detail/admin-product-detail.component';
+import { HttpClientModule } from '@angular/common/http'
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,16 +37,19 @@ import { HeaderAdminComponent } from './components/header-admin/header-admin.com
     UserFormComponent,
     UserListComponent,
     HeaderComponent,
-    HomeComponent,
     LayoutClientComponent,
     LayoutAdminComponent,
-    HeaderAdminComponent
+    HeaderAdminComponent,
+    AdminProductListComponent,
+    AdminProductFormComponent,
+    AdminProductDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
