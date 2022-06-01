@@ -14,17 +14,20 @@ export class AdminProductListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.onGetList();
+  }
+  onGetList = () => {
     this.productService.getProducts().subscribe((data) => {
       this.products = data
     });
   }
   onRemoveItem = (id: string) => {
     const confirm = window.confirm('Bạn có chắc chắn muốn xóa không?');
-    if (confirm) {
+    if (confirm && id) {
       // call api xoa
       this.productService.removeProduct(id).subscribe(() => {
         // reRender
-        this.products = this.products.filter(item => item._id !== id);
+        this.onGetList();
       });
     }
   }

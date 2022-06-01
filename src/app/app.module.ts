@@ -9,7 +9,7 @@ import { TableNameComponent } from './components/table/table-name/table-name.com
 import { TableGenderComponent } from './components/table/table-gender/table-gender.component';
 import { TableStatusComponent } from './components/table/table-status/table-status.component';
 import { TableAvatarComponent } from './components/table/table-avatar/table-avatar.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormComponent } from './components/form/form.component';
 import { ShowValidateComponent } from './components/show-validate/show-validate.component';
 import { UserComponent } from './pages/user/user.component';
@@ -48,7 +48,8 @@ import { HttpClientModule } from '@angular/common/http'
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule,
+    FormsModule, 
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [],

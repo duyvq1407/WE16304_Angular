@@ -1,1 +1,17 @@
-<p>admin-product-form works!</p>
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="">Name</label>
+        <input type="text" class="form-control" formControlName="name">
+    </div>
+    <app-show-validate [field]="productForm.get('name')" key="Tên sản phẩm"></app-show-validate>
+    <div class="form-group">
+        <label for="">Price</label>
+        <input type="number" class="form-control" formControlName="price">
+    </div>
+    <app-show-validate [field]="productForm.get('price')" key="Giá sản phẩm"></app-show-validate>
+    <div class="form-group">
+        <label for="">Image</label>
+        <input type="text" class="form-control" formControlName="image">
+    </div>
+    <button [disabled]="!productForm.valid" class="btn btn-success">Submit</button>
+</form>
