@@ -7,6 +7,7 @@
                 <th>Price</th>
                 <th>Image</th>
                 <th>Action</th>
+                <th>Status</th>
             </tr>
         </thead>
         <tbody>
@@ -29,6 +30,14 @@
                     </a>
                     <button class="btn btn-danger ms-1" (click)="onRemoveItem(product._id!)">
                         Remove
+                    </button>
+                </td>
+                <td>
+                    <button class="btn btn-success" *ngIf="product.status === 1" (click)="onUpdatedStatus(0,product._id!)">
+                        ON
+                    </button>
+                    <button class="btn btn-dark" *ngIf="product.status === 0" (click)="onUpdatedStatus(1,product._id!)">
+                        OFF
                     </button>
                 </td>
             </tr>

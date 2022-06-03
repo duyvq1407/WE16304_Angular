@@ -18,7 +18,8 @@ export class AdminProductDetailComponent implements OnInit {
         _id: '',
         name: '',
         image: '',
-        price: 0
+        price: 0,
+        status: 0
       }
     }
 
