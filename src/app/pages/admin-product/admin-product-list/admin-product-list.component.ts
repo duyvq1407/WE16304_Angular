@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { IProduct } from 'src/app/models/Product';
 import { ProductService } from 'src/app/services/product.service';
 
@@ -9,7 +10,10 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class AdminProductListComponent implements OnInit {
   products: IProduct[];
-  constructor(private productService: ProductService) { 
+  constructor(
+    private productService: ProductService,
+    private toastr: ToastrService
+    ) { 
     this.products = []
   }
 
@@ -24,6 +28,7 @@ export class AdminProductListComponent implements OnInit {
   onRemoveItem = (id: string) => {
     const confirm = window.confirm('Bạn có chắc chắn muốn xóa không?');
     if (confirm && id) {
+      this.toastr.success("Xóa thành công")
       // call api xoa
       this.productService.removeProduct(id).subscribe(() => {
         // reRender

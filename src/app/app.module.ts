@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -22,6 +21,8 @@ import { HeaderAdminComponent } from './components/header-admin/header-admin.com
 import { AdminProductListComponent } from './pages/admin-product/admin-product-list/admin-product-list.component';
 import { AdminProductFormComponent } from './pages/admin-product/admin-product-form/admin-product-form.component';
 import { AdminProductDetailComponent } from './pages/admin-product/admin-product-detail/admin-product-detail.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http'
 @NgModule({
   declarations: [
@@ -50,7 +51,9 @@ import { HttpClientModule } from '@angular/common/http'
     NgbModule,
     FormsModule, 
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

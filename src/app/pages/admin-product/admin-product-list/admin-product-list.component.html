@@ -22,9 +22,11 @@
                             Detail
                         </button>
                     </a>
-                    <button class="btn btn-primary ms-1">
-                        Edit
-                    </button>
+                    <a [routerLink]="['/admin','products', 'edit',product._id]">
+                        <button class="btn btn-primary ms-1">
+                            Edit
+                        </button>
+                    </a>
                     <button class="btn btn-danger ms-1" (click)="onRemoveItem(product._id!)">
                         Remove
                     </button>

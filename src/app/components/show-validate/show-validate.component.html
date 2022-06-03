@@ -3,3 +3,4 @@
 <span *ngIf="(field.dirty || field.touched) && field.errors?.['min']" class="text-danger">{{key}} nhỏ nhất là {{field.errors?.['min'].min}}</span>
 <span *ngIf="(field.dirty || field.touched) && field.errors?.['max']" class="text-danger">{{key}} lớn nhất là {{field.errors?.['max'].max}}</span>
 <span *ngIf="(field.dirty || field.touched) && field.errors?.['email']" class="text-danger">{{key}} không đúng định dạng</span>
+<span *ngIf="(field.dirty || field.touched) && field.errors?.['hasProductError']" class="text-danger">{{key}} phải có 'product'</span>
