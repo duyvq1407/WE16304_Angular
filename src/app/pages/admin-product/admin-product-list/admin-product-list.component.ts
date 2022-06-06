@@ -15,6 +15,7 @@ export class AdminProductListComponent implements OnInit {
     private toastr: ToastrService
     ) { 
     this.products = []
+
   }
 
   ngOnInit(): void {

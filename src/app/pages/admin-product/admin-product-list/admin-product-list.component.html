@@ -33,10 +33,10 @@
                     </button>
                 </td>
                 <td>
-                    <button class="btn btn-success" *ngIf="product.status === 1" (click)="onUpdatedStatus(0,product._id!)">
+                    <button class="btn btn-success min-w-60px" *ngIf="product.status === 1" (click)="onUpdatedStatus(0,product._id!)">
                         ON
                     </button>
-                    <button class="btn btn-dark" *ngIf="product.status === 0" (click)="onUpdatedStatus(1,product._id!)">
+                    <button class="btn btn-dark min-w-60px" *ngIf="product.status === 0" (click)="onUpdatedStatus(1,product._id!)">
                         OFF
                     </button>
                 </td>

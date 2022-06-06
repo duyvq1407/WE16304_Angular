@@ -23,7 +23,9 @@ import { AdminProductFormComponent } from './pages/admin-product/admin-product-f
 import { AdminProductDetailComponent } from './pages/admin-product/admin-product-detail/admin-product-detail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './pages/auth/login/login.component';
+import { RegisterComponent } from './pages/auth/register/register.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +45,9 @@ import { HttpClientModule } from '@angular/common/http'
     HeaderAdminComponent,
     AdminProductListComponent,
     AdminProductFormComponent,
-    AdminProductDetailComponent
+    AdminProductDetailComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
