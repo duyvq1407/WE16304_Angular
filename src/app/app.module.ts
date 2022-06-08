@@ -25,7 +25,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './pages/auth/login/login.component';
-import { RegisterComponent } from './pages/auth/register/register.component'
+import { RegisterComponent } from './pages/auth/register/register.component';
+import { CartComponent } from './components/cart/cart.component';
+import { CartPageComponent } from './pages/cart-page/cart-page.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +49,9 @@ import { RegisterComponent } from './pages/auth/register/register.component'
     AdminProductFormComponent,
     AdminProductDetailComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    CartComponent,
+    CartPageComponent
   ],
   imports: [
     BrowserModule,

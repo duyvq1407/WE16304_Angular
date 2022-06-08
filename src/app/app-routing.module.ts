@@ -6,6 +6,7 @@ import { AdminProductFormComponent } from './pages/admin-product/admin-product-f
 import { AdminProductListComponent } from './pages/admin-product/admin-product-list/admin-product-list.component';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { RegisterComponent } from './pages/auth/register/register.component';
+import { CartPageComponent } from './pages/cart-page/cart-page.component';
 import { LayoutAdminComponent } from './pages/layout/layout-admin/layout-admin.component';
 import { LayoutClientComponent } from './pages/layout/layout-client/layout-client.component';
 import { UserFormComponent } from './pages/user/user-form/user-form.component';
@@ -53,6 +54,10 @@ const routes: Routes = [
         path: '',
         pathMatch: 'full',
         redirectTo: 'products'
+      },
+      {
+        path: 'cart',
+        component: CartPageComponent
       },
       {
         path: 'user',

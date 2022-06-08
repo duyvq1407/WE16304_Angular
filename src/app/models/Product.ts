@@ -5,3 +5,10 @@ export interface IProduct {
     image?: string,
     status?: number
 }
+export interface IProductCart {
+    _id?: string,
+    name?: string,
+    price?: number,
+    image?: string,
+    quantity: number
+}
