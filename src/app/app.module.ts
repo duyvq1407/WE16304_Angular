@@ -11,18 +11,18 @@ import { HeaderAdminComponent } from './components/admin/header-admin/header-adm
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
-import { LoginComponent } from './pages/auth/login/login.component';
-import { RegisterComponent } from './pages/auth/register/register.component';
+import { LoginComponent } from './pages/client/auth/login/login.component';
+import { RegisterComponent } from './pages/client/auth/register/register.component';
 import { HeaderClientComponent } from './components/client/header-client/header-client.component';
 import { AsideAdminComponent } from './components/admin/aside-admin/aside-admin.component';
 import { NgxBootstrapIconsModule, allIcons } from 'ngx-bootstrap-icons';
-import { AdminBookListComponent } from './pages/admin-book/admin-book-list/admin-book-list.component';
-import { AdminBookFormComponent } from './pages/admin-book/admin-book-form/admin-book-form.component';
-import { AdminBookCateListComponent } from './pages/admin-bookCate/admin-book-cate-list/admin-book-cate-list.component';
-import { AdminBookCateFormComponent } from './pages/admin-bookCate/admin-book-cate-form/admin-book-cate-form.component';
-import { AdminBookCateDetailComponent } from './pages/admin-bookCate/admin-book-cate-detail/admin-book-cate-detail.component';
-import { AdminUserListComponent } from './pages/admin-user/admin-user-list/admin-user-list.component';
-import { AdminUserFormComponent } from './pages/admin-user/admin-user-form/admin-user-form.component';
+import { AdminBookListComponent } from './pages/admin/admin-book/admin-book-list/admin-book-list.component';
+import { AdminBookFormComponent } from './pages/admin/admin-book/admin-book-form/admin-book-form.component';
+import { AdminBookCateListComponent } from './pages/admin/admin-bookCate/admin-book-cate-list/admin-book-cate-list.component';
+import { AdminBookCateFormComponent } from './pages/admin/admin-bookCate/admin-book-cate-form/admin-book-cate-form.component';
+import { AdminBookCateDetailComponent } from './pages/admin/admin-bookCate/admin-book-cate-detail/admin-book-cate-detail.component';
+import { AdminUserListComponent } from './pages/admin/admin-user/admin-user-list/admin-user-list.component';
+import { AdminUserFormComponent } from './pages/admin/admin-user/admin-user-form/admin-user-form.component';
 import { FooterAdminComponent } from './components/admin/footer-admin/footer-admin.component';
 @NgModule({
   declarations: [
