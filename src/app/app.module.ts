@@ -19,6 +19,11 @@ import { RegisterComponent } from './pages/auth/register/register.component';
 import { HeaderClientComponent } from './components/client/header-client/header-client.component';
 import { AsideAdminComponent } from './components/admin/aside-admin/aside-admin.component';
 import { NgxBootstrapIconsModule, allIcons } from 'ngx-bootstrap-icons';
+import { AdminBookListComponent } from './pages/admin-book/admin-book-list/admin-book-list.component';
+import { AdminBookFormComponent } from './pages/admin-book/admin-book-form/admin-book-form.component';
+import { AdminBookCateListComponent } from './pages/admin-bookCate/admin-book-cate-list/admin-book-cate-list.component';
+import { AdminBookCateFormComponent } from './pages/admin-bookCate/admin-book-cate-form/admin-book-cate-form.component';
+import { AdminBookCateDetailComponent } from './pages/admin-bookCate/admin-book-cate-detail/admin-book-cate-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +37,12 @@ import { NgxBootstrapIconsModule, allIcons } from 'ngx-bootstrap-icons';
     LoginComponent,
     RegisterComponent,
     HeaderClientComponent,
-    AsideAdminComponent
+    AsideAdminComponent,
+    AdminBookListComponent,
+    AdminBookFormComponent,
+    AdminBookCateListComponent,
+    AdminBookCateFormComponent,
+    AdminBookCateDetailComponent
   ],
   imports: [
     BrowserModule,

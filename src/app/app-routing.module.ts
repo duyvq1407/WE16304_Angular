@@ -1,5 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminBookFormComponent } from './pages/admin-book/admin-book-form/admin-book-form.component';
+import { AdminBookListComponent } from './pages/admin-book/admin-book-list/admin-book-list.component';
+import { AdminBookCateDetailComponent } from './pages/admin-bookCate/admin-book-cate-detail/admin-book-cate-detail.component';
+import { AdminBookCateFormComponent } from './pages/admin-bookCate/admin-book-cate-form/admin-book-cate-form.component';
+import { AdminBookCateListComponent } from './pages/admin-bookCate/admin-book-cate-list/admin-book-cate-list.component';
 import { AdminProductDetailComponent } from './pages/admin-product/admin-product-detail/admin-product-detail.component';
 import { AdminProductFormComponent } from './pages/admin-product/admin-product-form/admin-product-form.component';
 import { AdminProductListComponent } from './pages/admin-product/admin-product-list/admin-product-list.component';
@@ -60,6 +65,44 @@ const routes: Routes = [
           {
             path: ':id',
             component: AdminProductDetailComponent
+          }
+        ]
+      },
+      {
+        path: 'categories',
+        children: [
+          {
+            path: '',
+            component: AdminBookCateListComponent
+          },
+          {
+            path: 'add',
+            component: AdminBookCateFormComponent
+          },
+          {
+            path: 'edit/:id',
+            component: AdminBookCateFormComponent
+          },
+          {
+            path: ':id',
+            component: AdminBookCateDetailComponent
+          }
+        ]
+      },
+      {
+        path: 'books',
+        children: [
+          {
+            path: '',
+            component: AdminBookListComponent
+          },
+          {
+            path: 'add',
+            component: AdminBookFormComponent
+          },
+          {
+            path: 'edit/:id',
+            component: AdminBookFormComponent
           }
         ]
       }
