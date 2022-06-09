@@ -14,6 +14,11 @@
                 <td>{{i + 1}}</td>
                 <td>{{category.name}}</td>
                 <td>
+                    <a [routerLink]="['/admin','categories',category._id]">
+                        <button class="btn btn-info ms-1">
+                            View
+                        </button>
+                    </a>
                     <a [routerLink]="['/admin','categories', 'edit',category._id]">
                         <button class="btn btn-primary ms-1">
                             Edit

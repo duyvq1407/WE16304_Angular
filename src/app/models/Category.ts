@@ -9,7 +9,7 @@ export interface ICategory {
 export interface ICategoryDetail {
     category: {
         _id?: string,
-        name: string,
+        name?: string,
         status: number        
     },
     books: IBook[]

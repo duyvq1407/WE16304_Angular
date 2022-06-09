@@ -24,6 +24,7 @@ import { AdminBookCateDetailComponent } from './pages/admin/admin-bookCate/admin
 import { AdminUserListComponent } from './pages/admin/admin-user/admin-user-list/admin-user-list.component';
 import { AdminUserFormComponent } from './pages/admin/admin-user/admin-user-form/admin-user-form.component';
 import { FooterAdminComponent } from './components/admin/footer-admin/footer-admin.component';
+import { StatusComponent } from './components/status/status.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +43,8 @@ import { FooterAdminComponent } from './components/admin/footer-admin/footer-adm
     AdminBookCateDetailComponent,
     AdminUserListComponent,
     AdminUserFormComponent,
-    FooterAdminComponent
+    FooterAdminComponent,
+    StatusComponent
   ],
   imports: [
     BrowserModule,
