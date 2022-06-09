@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { ICategory } from '../models/Category';
+import { ICategory, ICategoryDetail } from '../models/Category';
 
 @Injectable({
   providedIn: 'root'
@@ -18,8 +18,8 @@ export class CategoryService {
   removeCategory = (id: string):Observable<ICategory> => { // Observable giúp lắng nghe API trả về kq
     return this.http.delete<ICategory>(`${environment.categories}/${id}`)
   }
-  getCategory = (id: string):Observable<ICategory> => { // Observable giúp lắng nghe API trả về kq
-    return this.http.get<ICategory>(`${environment.categories}/${id}`)
+  getCategory = (id: string):Observable<ICategoryDetail> => { // Observable giúp lắng nghe API trả về kq
+    return this.http.get<ICategoryDetail>(`${environment.categories}/${id}`)
   }
   addCategory = (book: ICategory):Observable<ICategory> => {
     return this.http.post<ICategory>(`${environment.categories}`, book)

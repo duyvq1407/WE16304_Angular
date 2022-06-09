@@ -24,6 +24,9 @@ import { AdminBookFormComponent } from './pages/admin-book/admin-book-form/admin
 import { AdminBookCateListComponent } from './pages/admin-bookCate/admin-book-cate-list/admin-book-cate-list.component';
 import { AdminBookCateFormComponent } from './pages/admin-bookCate/admin-book-cate-form/admin-book-cate-form.component';
 import { AdminBookCateDetailComponent } from './pages/admin-bookCate/admin-book-cate-detail/admin-book-cate-detail.component';
+import { AdminUserListComponent } from './pages/admin-user/admin-user-list/admin-user-list.component';
+import { AdminUserFormComponent } from './pages/admin-user/admin-user-form/admin-user-form.component';
+import { FooterAdminComponent } from './components/admin/footer-admin/footer-admin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +45,10 @@ import { AdminBookCateDetailComponent } from './pages/admin-bookCate/admin-book-
     AdminBookFormComponent,
     AdminBookCateListComponent,
     AdminBookCateFormComponent,
-    AdminBookCateDetailComponent
+    AdminBookCateDetailComponent,
+    AdminUserListComponent,
+    AdminUserFormComponent,
+    FooterAdminComponent
   ],
   imports: [
     BrowserModule,

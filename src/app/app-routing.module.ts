@@ -8,6 +8,8 @@ import { AdminBookCateListComponent } from './pages/admin-bookCate/admin-book-ca
 import { AdminProductDetailComponent } from './pages/admin-product/admin-product-detail/admin-product-detail.component';
 import { AdminProductFormComponent } from './pages/admin-product/admin-product-form/admin-product-form.component';
 import { AdminProductListComponent } from './pages/admin-product/admin-product-list/admin-product-list.component';
+import { AdminUserFormComponent } from './pages/admin-user/admin-user-form/admin-user-form.component';
+import { AdminUserListComponent } from './pages/admin-user/admin-user-list/admin-user-list.component';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { RegisterComponent } from './pages/auth/register/register.component';
 import { LayoutAdminComponent } from './pages/layout/layout-admin/layout-admin.component';
@@ -103,6 +105,23 @@ const routes: Routes = [
           {
             path: 'edit/:id',
             component: AdminBookFormComponent
+          }
+        ]
+      },
+      {
+        path: 'users',
+        children: [
+          {
+            path: '',
+            component: AdminUserListComponent
+          },
+          {
+            path: 'add',
+            component: AdminUserFormComponent
+          },
+          {
+            path: 'edit/:id',
+            component: AdminUserFormComponent
           }
         ]
       }

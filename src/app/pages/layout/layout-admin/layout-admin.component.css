@@ -10,7 +10,7 @@
 .wrapper{
     padding-left: 265px;
     background: #EEF0F8;
-    height: 2000px;
+    height: 100vh;
 }
 .header {
     align-items: center;
@@ -34,7 +34,7 @@
 /* Content */
 .subheader{
     position: fixed;
-    z-index: 1000;
+    z-index: 90;
     height: 54px;
     top: 65px;
     left: 265px;
@@ -72,5 +72,6 @@ h5{
     position: fixed;
     bottom: 0;
     left: 265px;
+    height: 60px;
     right: 0;
 }

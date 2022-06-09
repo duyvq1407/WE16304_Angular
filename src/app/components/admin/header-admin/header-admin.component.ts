@@ -11,7 +11,6 @@ export class HeaderAdminComponent implements OnInit {
 
   ngOnInit(): void {
     const user = JSON.parse(localStorage.getItem('LogedInUser') as string)
-    console.log(user)
     this.userName = user.user.name
   }
 
