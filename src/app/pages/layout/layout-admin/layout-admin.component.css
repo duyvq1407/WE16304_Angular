@@ -9,7 +9,6 @@
 
 .wrapper{
     padding-left: 265px;
-    
     background: #EEF0F8;
     height: 2000px;
 }
@@ -28,14 +27,14 @@
 }
 
 .content{
-    padding-top: 165px;
-    padding: 25px 0;
+    padding: 135px 0 25px 0;
 }
 
 
 /* Content */
 .subheader{
     position: fixed;
+    z-index: 1000;
     height: 54px;
     top: 65px;
     left: 265px;
@@ -66,9 +65,6 @@ h5{
 .btn-sm:hover{
     color: white;
     background: #FFA800;
-}
-.container{
-    padding-top: 105px;
 }
 
 .footer{
