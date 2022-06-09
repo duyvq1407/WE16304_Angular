@@ -1,11 +1,29 @@
-<main class="container-fluid">
-	<div class="row">
-		<div class="col-md-3 col-lg-2 bg-light sidebar">
-			<app-aside-admin></app-aside-admin>
-		</div>
-		<div class="content col-md-9 ms-sm-auto col-lg-10">
-			<app-header-admin></app-header-admin>
-			<!-- <router-outlet></router-outlet> -->
-		</div>
-	</div>
-</main>
+<div class="">
+  <div class="aside d-flex flex-column">
+    <app-aside-admin></app-aside-admin>
+  </div>
+  <div class="wrapper d-flex flex-column flex-row-fluid">
+    <div class="header">
+      <app-header-admin></app-header-admin>
+    </div>
+    <div class="content">
+      <div class="subheader py-2">
+        <div class="container-fluid d-flex align-items-center ">
+          <div class="d-flex align-items-center mr-2">
+            <h5 class="mt-2 mb-2 ms-3">Book</h5>
+            <a routerLink="/admin/books/add" class="btn btn-light-warning btn-sm">Add New</a>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+    <div class="footer py-3 d-flex flex-lg-column">
+          <div class="container-fluid d-flex flex-column align-items-center justify-content-between">
+            <span>Made with heart by Vũ Quang Duy</span>
+          </div>
+        </div>
+  </div>
+
+</div>

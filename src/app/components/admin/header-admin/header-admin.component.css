@@ -1,0 +1,11 @@
+.text-dark-gray{
+    color: darkgray;
+}
+.w-145{
+    width: 150%;
+}
+.user-info{
+    border-bottom: 1px solid #d9dee3;
+    padding: 6px 8px 10px 18px;
+    color: black;
+}

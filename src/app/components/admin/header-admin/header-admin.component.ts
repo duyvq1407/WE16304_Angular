@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header-admin.component.css']
 })
 export class HeaderAdminComponent implements OnInit {
-
+  userName: string = '';
   constructor() { }
 
   ngOnInit(): void {
+    const user = JSON.parse(localStorage.getItem('LogedInUser') as string)
+    console.log(user)
+    this.userName = user.user.name
   }
 
 }

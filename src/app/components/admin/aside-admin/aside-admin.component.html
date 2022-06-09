@@ -1,39 +1,30 @@
-<div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark sidebar">
-    <a routerLink="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-      <span class="fs-4">Sidebar</span>
-    </a>
-    <hr>
-    <ul class="nav nav-pills flex-column mb-auto">
-      <li class="nav-item">
-        <a routerLink="#" class="nav-link active" aria-current="page">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
-          Home
+<div class="logo flex-column-auto">
+  <a routerLink="#">
+    <img width="100" src="https://upload.wikimedia.org/wikipedia/commons/2/2c/OneWeb_Logo.png" alt="">
+  </a>
+</div>
+<div class="aside-menu-wrapper flex-column-fluid">
+  <div class="aside-menu my-4">
+    <ul class="menu-nav">
+      <li class="menu-item">
+        <a routerLink="#" class="menu-link">
+          <span class="menu-icon">
+            <i-bs name="activity" width="20" height="20"></i-bs>
+          </span>
+          <span class="menu-text mx-3">Dashboard</span>
         </a>
       </li>
-      <li>
-        <a routerLink="/admin" class="nav-link text-white">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
-          Dashboard
-        </a>
+      <li class="menu-section">
+        <h4 class="menu-text">Admin</h4>
       </li>
-      <li>
-        <a routerLink="/admin/books" class="nav-link text-white">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
-          Orders
-        </a>
-      </li>
-      <li>
-        <a routerLink="/admin/products" class="nav-link text-white">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
-          Products
-        </a>
-      </li>
-      <li>
-        <a routerLink="#" class="nav-link text-white">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-          Customers
+      <li class="menu-item menu-item-submenu">
+        <a routerLink="Book" class="menu-link">
+          <span class="menu-icon">
+            <i-bs name="book" width="20" height="20"></i-bs>
+          </span>
+          <span class="menu-text mx-3">Book</span>
         </a>
       </li>
     </ul>
   </div>
+</div>
