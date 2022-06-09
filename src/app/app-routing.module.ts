@@ -5,9 +5,6 @@ import { AdminBookListComponent } from './pages/admin-book/admin-book-list/admin
 import { AdminBookCateDetailComponent } from './pages/admin-bookCate/admin-book-cate-detail/admin-book-cate-detail.component';
 import { AdminBookCateFormComponent } from './pages/admin-bookCate/admin-book-cate-form/admin-book-cate-form.component';
 import { AdminBookCateListComponent } from './pages/admin-bookCate/admin-book-cate-list/admin-book-cate-list.component';
-import { AdminProductDetailComponent } from './pages/admin-product/admin-product-detail/admin-product-detail.component';
-import { AdminProductFormComponent } from './pages/admin-product/admin-product-form/admin-product-form.component';
-import { AdminProductListComponent } from './pages/admin-product/admin-product-list/admin-product-list.component';
 import { AdminUserFormComponent } from './pages/admin-user/admin-user-form/admin-user-form.component';
 import { AdminUserListComponent } from './pages/admin-user/admin-user-list/admin-user-list.component';
 import { LoginComponent } from './pages/auth/login/login.component';
@@ -47,28 +44,7 @@ const routes: Routes = [
       {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'products'
-      },
-      {
-        path: 'products',
-        children: [
-          {
-            path: '',
-            component: AdminProductListComponent
-          },
-          {
-            path: 'add',
-            component: AdminProductFormComponent
-          },
-          {
-            path: 'edit/:id',
-            component: AdminProductFormComponent
-          },
-          {
-            path: ':id',
-            component: AdminProductDetailComponent
-          }
-        ]
+        redirectTo: 'books'
       },
       {
         path: 'categories',
