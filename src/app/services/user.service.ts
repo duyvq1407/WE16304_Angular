@@ -18,4 +18,17 @@ export class UserService {
   login = (user: IUser): Observable<IUser> => {
     return this.http.post<IUser>(`${environment.login}`, user)
   }
+
+  getUsers = (): Observable<IUser[]> => {
+    return this.http.get<IUser[]>(`http://localhost:3001/api/users`)
+  }
+  getUser = (id:string): Observable<IUser> => {
+    return this.http.get<IUser>(`http://localhost:3001/api/users/${id}`)
+  }
+  removeUser = (id:string): Observable<IUser> => {
+    return this.http.delete<IUser>(`http://localhost:3001/api/users/${id}`)
+  }
+  editUsers = (user: IUser ,id:string): Observable<IUser> => {
+    return this.http.put<IUser>(`http://localhost:3001/api/users/${id}`,user)
+  }
 }

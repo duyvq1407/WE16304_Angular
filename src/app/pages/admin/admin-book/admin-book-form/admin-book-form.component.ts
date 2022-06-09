@@ -28,7 +28,7 @@ export class AdminBookFormComponent implements OnInit {
       description: new FormControl(''),
       image_url: new FormControl(''),
       category_id: new FormControl('',[Validators.required]),
-      status: new FormControl(0)
+      status: new FormControl(1, Validators.required)
     });
   }
   ngOnInit(): void {

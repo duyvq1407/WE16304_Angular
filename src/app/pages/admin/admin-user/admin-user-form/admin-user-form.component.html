@@ -1,1 +1,36 @@
-<p>admin-user-form works!</p>
+<div class="container px-3">
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="">Name</label>
+            <input type="text" class="form-control" formControlName="name">
+            <app-show-validate [field]="userForm.get('name')" key="Tên"></app-show-validate>
+        </div>
+        <div class="form-group">
+            <label for="">Email</label>
+            <input type="email" class="form-control" formControlName="email">
+            <app-show-validate [field]="userForm.get('email')" key="Email"></app-show-validate>
+        </div>
+        <div class="form-group">
+            <label for="">Password</label>
+            <input type="password" class="form-control" formControlName="password">
+            <app-show-validate [field]="userForm.get('password')" key="Mật khẩu"></app-show-validate>
+        </div>
+        <div class="form-group">
+            <label for="">Role</label>
+            <input type="number" class="form-control" formControlName="role" min="0" max="1">
+            <app-show-validate [field]="userForm.get('role')" key="Phân quyền"></app-show-validate>
+        </div>
+        <div class="form-group">
+            <label for="">Status</label>
+            <input type="text" class="form-control" formControlName="status" min="0" max="1">
+            <app-show-validate [field]="userForm.get('status')" key="status"></app-show-validate>
+        </div>
+        <div class="d-flex form-group align-items-center justify-content-between">
+            <button [disabled]="!userForm.valid" class="mt-2 btn btn-success">Submit</button>
+            <button class="btn text-primary d-flex align-items-center" routerLink="/admin/users">
+                <i-bs name="arrow-left" width="17" height="17" class="me-2"></i-bs>
+                Back
+            </button>
+        </div>
+    </form>
+</div>
