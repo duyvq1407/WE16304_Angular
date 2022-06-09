@@ -101,3 +101,13 @@ body {
   
   .fw-semibold { font-weight: 600; }
   .lh-tight { line-height: 1.25; }
+
+  .sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    padding-top: 50px;
+    min-width: 255px
+  }

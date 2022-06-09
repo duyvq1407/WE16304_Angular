@@ -17,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { RegisterComponent } from './pages/auth/register/register.component';
 import { HeaderClientComponent } from './components/client/header-client/header-client.component';
-import { AsideAdminComponent } from './components/admin/aside-admin/aside-admin.component'
+import { AsideAdminComponent } from './components/admin/aside-admin/aside-admin.component';
+import { NgxBootstrapIconsModule, allIcons } from 'ngx-bootstrap-icons';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,8 @@ import { AsideAdminComponent } from './components/admin/aside-admin/aside-admin.
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    NgxBootstrapIconsModule.pick(allIcons)
   ],
   providers: [],
   bootstrap: [AppComponent]
