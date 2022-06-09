@@ -39,7 +39,6 @@ export class AdminBookFormComponent implements OnInit {
     const id = this.route.snapshot.params['id'];
     if(id) {
       this.bookService.getBook(id).subscribe((data) => {
-        console.log(data)
         this.bookForm.patchValue({
           name: data.name,
           price: data.price,

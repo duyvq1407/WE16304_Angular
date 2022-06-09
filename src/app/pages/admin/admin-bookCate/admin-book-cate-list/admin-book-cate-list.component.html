@@ -1,1 +1,39 @@
-<p>admin-book-cate-list works!</p>
+<div class="container">
+    <button class="btn btn-primary" routerLink="/admin/categories/add">Add New</button>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Action</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let category of categories; let i = index">
+                <td>{{i + 1}}</td>
+                <td>{{category.name}}</td>
+                <td>
+                    <a [routerLink]="['/admin','categories', 'edit',category._id]">
+                        <button class="btn btn-primary ms-1">
+                            Edit
+                        </button>
+                    </a>
+                    <button class="btn btn-danger ms-1" (click)="onRemoveItem(category._id!)">
+                        Remove
+                    </button>
+                </td>
+                <td>
+                    <button class="btn btn-success min-w-70px" *ngIf="category.status === 1"
+                        (click)="onUpdatedStatus(0,category._id!)">
+                        ON
+                    </button>
+                    <button class="btn btn-dark min-w-70px" *ngIf="category.status === 0"
+                        (click)="onUpdatedStatus(1,category._id!)">
+                        OFF
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
