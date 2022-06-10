@@ -25,6 +25,11 @@ import { AdminUserListComponent } from './pages/admin/admin-user/admin-user-list
 import { AdminUserFormComponent } from './pages/admin/admin-user/admin-user-form/admin-user-form.component';
 import { FooterAdminComponent } from './components/admin/footer-admin/footer-admin.component';
 import { StatusComponent } from './components/status/status.component';
+import { FooterClientComponent } from './components/client/footer-client/footer-client.component';
+import { HomeComponent } from './pages/client/home/home.component';
+import { AccountComponent } from './pages/client/account/account.component';
+import { CategoryDetailComponent } from './pages/client/category-detail/category-detail.component';
+import { BookDetailComponent } from './pages/client/book-detail/book-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +49,12 @@ import { StatusComponent } from './components/status/status.component';
     AdminUserListComponent,
     AdminUserFormComponent,
     FooterAdminComponent,
-    StatusComponent
+    StatusComponent,
+    FooterClientComponent,
+    HomeComponent,
+    AccountComponent,
+    CategoryDetailComponent,
+    BookDetailComponent
   ],
   imports: [
     BrowserModule,

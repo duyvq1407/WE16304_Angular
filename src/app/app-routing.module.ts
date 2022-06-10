@@ -7,11 +7,15 @@ import { AdminBookCateFormComponent } from './pages/admin/admin-bookCate/admin-b
 import { AdminBookCateListComponent } from './pages/admin/admin-bookCate/admin-book-cate-list/admin-book-cate-list.component';
 import { AdminUserFormComponent } from './pages/admin/admin-user/admin-user-form/admin-user-form.component';
 import { AdminUserListComponent } from './pages/admin/admin-user/admin-user-list/admin-user-list.component';
+import { AccountComponent } from './pages/client/account/account.component';
 import { LoginComponent } from './pages/client/auth/login/login.component';
 import { RegisterComponent } from './pages/client/auth/register/register.component';
+import { CategoryDetailComponent } from './pages/client/category-detail/category-detail.component';
+import { HomeComponent } from './pages/client/home/home.component';
 import { LayoutAdminComponent } from './pages/layout/layout-admin/layout-admin.component';
 import { LayoutClientComponent } from './pages/layout/layout-client/layout-client.component';
 import { CanAccessAdminGuard } from './services/guards/can-access-admin.guard';
+import { CanAcessAccountGuard } from './services/guards/can-acess-account.guard';
 
 const routes: Routes = [
   {
@@ -19,10 +23,17 @@ const routes: Routes = [
     component: LayoutClientComponent,
     children: [
       {
+        path: '',
+        component: HomeComponent
+      }
+      ,{
         path: 'account',
-        // Nếu có children thì k dùng component để render nữa
-        // Nếu vẫn muốn sử dụng component(Khung layout) thì trong component sẽ phải có route-oulet
+        // canActivate: [CanAcessAccountGuard],
         children: [
+          {
+            path: '',
+            component: AccountComponent
+          },
           {
             path: 'signup',
             component: RegisterComponent
@@ -33,6 +44,15 @@ const routes: Routes = [
           },
         ]
       },
+      {
+        path: 'categories',
+        children: [
+          {
+            path: ':id',
+            component: CategoryDetailComponent
+          }
+        ]
+      }
       
     ]
   },

@@ -16,8 +16,8 @@
                 <td>{{i + 1}}</td>
                 <td>{{user.name}}</td>
                 <td>{{user.email}}</td>
-                <td *ngIf="user.role == 0">Admin</td>
-                <td *ngIf="user.role == 1">Member</td>
+                <td *ngIf="user.role == 1">Admin</td>
+                <td *ngIf="user.role == 0">Member</td>
                 <td>
                     <button class="btn btn-danger ms-1" (click)="onRemoveItem(user._id!)">
                         Remove

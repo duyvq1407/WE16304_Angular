@@ -33,7 +33,7 @@ export class RegisterComponent implements OnInit {
     this.userService.register(data).subscribe(() => {
       this.toastr.success("Đăng ký thành công")
       setTimeout(()=>{
-        this.router.navigateByUrl('/user')
+        this.router.navigateByUrl('/account/signin')
       }, 2000)
     })
   }

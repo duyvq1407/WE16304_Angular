@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('LogedInUser', JSON.stringify(user))
       this.toastr.success("Đăng nhập thành công")
       setTimeout(()=>{
-        this.router.navigateByUrl('/admin/products')
+        this.router.navigateByUrl('/account')
       }, 2000)
     })
   }

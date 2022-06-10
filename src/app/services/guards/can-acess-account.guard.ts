@@ -6,25 +6,20 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class CanAccessAdminGuard implements CanActivate {
-
+export class CanAcessAccountGuard implements CanActivate {
   constructor(
-    private router : Router,
-    private toastr: ToastrService
+    private router : Router
     ){
 
   }
-
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-      const user = JSON.parse(localStorage.getItem('LogedInUser')!);
-      console.log(user)
-      if (user.user.role === 1) {
+      const user = localStorage.getItem('LogedInUser');
+      if (user) {
         return true;
       }
-      this.toastr.error("Không có quyền truy cập admin")
-      this.router.navigateByUrl('/account/signin')
+      this.router.navigateByUrl('/account/signin');
       return false;
   }
   
