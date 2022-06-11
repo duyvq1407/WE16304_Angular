@@ -28,11 +28,11 @@ export class LoginComponent implements OnInit {
   onSubmit(){
     const data = this.loginForm.value;
     this.userService.login(data).subscribe((user) => {
-      localStorage.setItem('LogedInUser', JSON.stringify(user))
-      this.toastr.success("Đăng nhập thành công")
-      setTimeout(()=>{
-        this.router.navigateByUrl('/account')
-      }, 2000)
+        localStorage.setItem('LogedInUser', JSON.stringify(user))
+        this.toastr.success("Đăng nhập thành công")
+        setTimeout(()=>{
+          this.router.navigateByUrl('/account')
+        }, 2000)    
     })
   }
 

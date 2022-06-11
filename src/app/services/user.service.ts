@@ -31,4 +31,7 @@ export class UserService {
   editUsers = (user: IUser ,id:string): Observable<IUser> => {
     return this.http.put<IUser>(`http://localhost:3001/api/users/${id}`,user)
   }
+  editStatus = (x: number, id: string): Observable<IUser> => {
+    return this.editUsers({status: x}, id)
+  }
 }

@@ -6,22 +6,23 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class CanAcessAccountGuard implements CanActivate {
+export class CanAccessSignupGuard implements CanActivate {
 
   constructor(
-    private router : Router
+    private router : Router,
+    private toastr: ToastrService
     ){
 
   }
+
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
       const user = JSON.parse(localStorage.getItem('LogedInUser')!);
       if (user) {
-        return true;
+        this.router.navigateByUrl('/account')
       }
-      this.router.navigateByUrl('/signin')
-      return false;
+      return true;
   }
   
 }

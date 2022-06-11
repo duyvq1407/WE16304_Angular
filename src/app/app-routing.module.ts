@@ -15,6 +15,7 @@ import { HomeComponent } from './pages/client/home/home.component';
 import { LayoutAdminComponent } from './pages/layout/layout-admin/layout-admin.component';
 import { LayoutClientComponent } from './pages/layout/layout-client/layout-client.component';
 import { CanAccessAdminGuard } from './services/guards/can-access-admin.guard';
+import { CanAccessSignupGuard } from './services/guards/can-access-signup.guard';
 import { CanAcessAccountGuard } from './services/guards/can-acess-account.guard';
 
 const routes: Routes = [
@@ -28,21 +29,18 @@ const routes: Routes = [
       }
       ,{
         path: 'account',
-        // canActivate: [CanAcessAccountGuard],
-        children: [
-          {
-            path: '',
-            component: AccountComponent
-          },
-          {
-            path: 'signup',
-            component: RegisterComponent
-          },
-          {
-            path: 'signin',
-            component: LoginComponent
-          },
-        ]
+        component: AccountComponent,
+        canActivate: [CanAcessAccountGuard]
+      },
+      {
+        path: 'signin',
+        canActivate: [CanAccessSignupGuard],
+        component: LoginComponent
+      },
+      {
+        path: 'signup',
+        canActivate: [CanAccessSignupGuard],
+        component: RegisterComponent
       },
       {
         path: 'categories',

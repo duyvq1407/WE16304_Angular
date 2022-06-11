@@ -17,7 +17,7 @@
         <tbody>
             <tr *ngFor="let book of books; let i = index">
                 <td>{{i + 1}}</td>
-                <td>{{book.name}}</td>
+                <td class="" [width]="250">{{book.name}}</td>
                 <td><img [src]="book.image_url" width="100"></td>
                 <td *ngFor="let category of categories" [hidden]="category._id !== book.category_id">{{category.name}}</td>
                 <td>{{book.price}}</td>

@@ -18,13 +18,16 @@ export class CanAccessAdminGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+      if(!localStorage.getItem('LogedInUser')) {
+        this.toastr.error("Bạn cần đăng nhập để truy cập admin")
+        this.router.navigateByUrl('/signin')
+      }
       const user = JSON.parse(localStorage.getItem('LogedInUser')!);
-      console.log(user)
       if (user.user.role === 1) {
         return true;
       }
       this.toastr.error("Không có quyền truy cập admin")
-      this.router.navigateByUrl('/account/signin')
+      this.router.navigateByUrl('/')
       return false;
   }
   

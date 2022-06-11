@@ -10,7 +10,7 @@
 .wrapper{
     padding-left: 265px;
     background: #EEF0F8;
-    height: 100vh;
+    height: fit-content;
 }
 .header {
     align-items: center;
