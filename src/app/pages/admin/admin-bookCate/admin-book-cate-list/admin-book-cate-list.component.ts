@@ -28,11 +28,11 @@ export class AdminBookCateListComponent implements OnInit {
       this.categories = data
     });
   }
-  onUpdatedStatus(newStatus: number,id: string){
-    this.cateService.editCategory({status: newStatus}, id).subscribe(()=>{
-      this.onGetList()
-    })
-  }
+  // onUpdatedStatus(newStatus: number,id: string){
+  //   this.cateService.editCategory({status: newStatus}, id).subscribe(()=>{
+  //     this.onGetList()
+  //   })
+  // }
   onRemoveItem = (id: string) => {
     const confirm = window.confirm('Bạn có chắc chắn muốn xóa không?');
     if (confirm && id) {

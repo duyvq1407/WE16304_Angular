@@ -11,6 +11,7 @@
     padding-left: 265px;
     background: #EEF0F8;
     height: fit-content;
+    min-height: 100vh;
 }
 .header {
     align-items: center;

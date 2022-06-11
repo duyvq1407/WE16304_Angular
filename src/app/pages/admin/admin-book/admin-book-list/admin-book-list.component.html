@@ -34,14 +34,15 @@
                     </button>
                 </td>
                 <td>
-                    <button class="btn btn-success min-w-70px" *ngIf="book.status === 1"
+                    <app-status [x]="book" [id]="book._id!"></app-status>
+                    <!-- <button class="btn btn-success" *ngIf="book.status === 1"
                         (click)="onUpdatedStatus(0,book._id!)">
                         ON
                     </button>
-                    <button class="btn btn-dark min-w-70px" *ngIf="book.status === 0"
+                    <button class="btn btn-dark" *ngIf="book.status === 0"
                         (click)="onUpdatedStatus(1,book._id!)">
                         OFF
-                    </button>
+                    </button> -->
                 </td>
             </tr>
         </tbody>

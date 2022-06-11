@@ -32,11 +32,11 @@ export class AdminBookListComponent implements OnInit {
       this.books = data
     });
   }
-  onUpdatedStatus(newStatus: number,id: string){
-    this.bookService.editBook({status: newStatus}, id).subscribe(()=>{
-      this.onGetList()
-    })
-  }
+  // onUpdatedStatus(newStatus: number,id: string){
+  //   this.bookService.editBook({status: newStatus}, id).subscribe(()=>{
+  //     this.onGetList()
+  //   })
+  // }
   onRemoveItem = (id: string) => {
     const confirm = window.confirm('Bạn có chắc chắn muốn xóa không?');
     if (confirm && id) {
