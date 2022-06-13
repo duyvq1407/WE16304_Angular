@@ -1,13 +1,31 @@
-<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-        <label for="">Email</label>
-        <input type="email" class="form-control" formControlName="email">
-        <app-show-validate [field]="loginForm.get('email')" key="Email"></app-show-validate>
+<div class="layout-account">
+    <div class="container sanphammoi">
+        <div class="row">
+            <div class="col-5 layout-account-left">
+                <div class="sanphammoi_tiltle my-5">
+                    <h2>
+                        <a routerLink="#">Đăng nhập</a>
+                    </h2>
+                </div>
+            </div>
+            <div class="col-7 layout-account-right my-5">
+                <form [formGroup]="loginForm"  (ngSubmit)="onSubmit()">
+                    <div class="form-group mx-5 my-3">
+                        <label for="">Email</label>
+                        <input type="email" class="form-control" formControlName="email">
+                        <app-show-validate [field]="loginForm.get('email')" key="Email"></app-show-validate>
+                    </div>
+                    <div class="form-group mx-5 my-3">
+                        <label for="">Password</label>
+                        <input type="password" class="form-control" formControlName="password">
+                        <app-show-validate [field]="loginForm.get('password')" key="Mật khẩu"></app-show-validate>
+                    </div>
+                    <button [disabled]="!loginForm.valid" class="mx-5 btn btn-success">Đăng nhập</button>
+                </form>
+                <a class="mx-5 mt-3 d-block" routerLink="#">Quên mật khẩu?</a>
+                <div class="mx-5 d-flex align-items-center"><p class="m-0 d-block me-2">Nếu bạn chưa có tài khoản? </p> <a routerLink="/signup"> Đăng ký</a> </div>
+    
+            </div>
+        </div>
     </div>
-    <div class="form-group">
-        <label for="">Password</label>
-        <input type="password" class="form-control" formControlName="password">
-        <app-show-validate [field]="loginForm.get('password')" key="Mật khẩu"></app-show-validate>
-    </div>
-    <button [disabled]="!loginForm.valid" class="mt-1 btn btn-success">Submit</button>
-</form>
+</div>

@@ -195,3 +195,16 @@ html{
 a{
     text-decoration: none;
 }
+
+.layout-account{
+  border-top: 1px solid #d5d5d5;
+  margin-top: 50px;
+}
+
+.layout-account h6{
+  margin: 0;
+}
+
+.layout-account-left{
+  border-right: 1px solid #d5d5d5;
+}

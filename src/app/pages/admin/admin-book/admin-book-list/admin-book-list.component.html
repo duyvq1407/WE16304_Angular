@@ -1,5 +1,4 @@
 <div class="container">
-    <button class="btn btn-primary" routerLink="/admin/books/add">Add New</button>
     <table class="table table-striped table-hover">
         <thead>
             <tr>
@@ -15,11 +14,12 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let book of books; let i = index">
-                <td>{{i + 1}}</td>
-                <td class="" [width]="250">{{book.name}}</td>
+            <tr *ngFor="let book of books| slice: (page-1) * 3 : page * 3; let i = index">
+                <td >{{i + 1}}</td>
+                <td [width]="250">{{book.name}}</td>
                 <td><img [src]="book.image_url" width="100"></td>
-                <td *ngFor="let category of categories" [hidden]="category._id !== book.category_id">{{category.name}}</td>
+                <td *ngFor="let category of categories" [hidden]="category._id !== book.category_id">{{category.name}}
+                </td>
                 <td>{{book.price}}</td>
                 <td>{{book.sale_price}}%</td>
                 <td>{{book.description}}</td>
@@ -47,4 +47,8 @@
             </tr>
         </tbody>
     </table>
+    <div class="container d-flex justify-content-between" style="margin-bottom: 80px">
+        <button class="btn btn-primary" routerLink="/admin/books/add">Add New</button>
+        <ngb-pagination [collectionSize]="books.length" [(page)]="page" [boundaryLinks]="true"></ngb-pagination>
+    </div>
 </div>

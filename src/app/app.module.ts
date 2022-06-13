@@ -30,6 +30,8 @@ import { HomeComponent } from './pages/client/home/home.component';
 import { AccountComponent } from './pages/client/account/account.component';
 import { CategoryDetailComponent } from './pages/client/category-detail/category-detail.component';
 import { BookDetailComponent } from './pages/client/book-detail/book-detail.component';
+import { CartComponent } from './components/client/cart/cart.component';
+import { CartPageComponent } from './pages/cart-page/cart-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +56,9 @@ import { BookDetailComponent } from './pages/client/book-detail/book-detail.comp
     HomeComponent,
     AccountComponent,
     CategoryDetailComponent,
-    BookDetailComponent
+    BookDetailComponent,
+    CartComponent,
+    CartPageComponent
   ],
   imports: [
     BrowserModule,

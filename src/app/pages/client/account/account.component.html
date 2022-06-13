@@ -1,27 +1,26 @@
-<div *ngIf="user" class="container sanphammoi">
-    <div class="sanphammoi_tiltle">
-        <h2>
-            <a href="#">Tài khoản</a>
-        </h2>
+<div class="layout-account">
+    <div class="container sanphammoi">
+        <div class="row">
+            <div class="col-5 layout-account-left">
+                <div class="sanphammoi_tiltle my-5">
+                    <h2>
+                        <a routerLink="#">Tài khoản</a>
+                    </h2>
+                </div>
+            </div>
+            <div class="col-7 layout-account-right my-5">
+                <div class='d-flex align-items-center'>
+                    <h6 class="my-2 mx-3">Name: </h6> {{user.name}}
+                </div>
+                <div class='d-flex align-items-center'>
+                    <h6 class="my-2 mx-3">Email: </h6> {{user.email}}
+                </div>
+                <div>
+                    <h6 *ngIf="user.role === 1"><button class="btn text-primary" routerLink="/admin">Go to Admin<i-bs
+                                name="arrow-right-short" width="25" height="25"></i-bs></button></h6>
+                </div>
+                <button class="btn btn-danger mx-3 my-3" (click)="onLogOut()">Đăng xuất</button>
+            </div>
+        </div>
     </div>
-    <div class='d-flex align'>
-        <h6>Name: </h6> {{user.name}}
-    </div>
-    <div class='d-flex align'>
-        <h6>Email: </h6> {{user.email}}
-    </div>
-    <div>
-        <h6 *ngIf="user.role === 1"><button class="btn text-primary" routerLink="/admin">Go to Admin<i-bs
-                    name="arrow-right-short" width="25" height="25"></i-bs></button></h6>
-    </div>
-    <button class="btn btn-danger" (click)="onLogOut()">Đăng xuất</button>
 </div>
-<!-- <div *ngIf="user" class="container sanphammoi">
-    <div class="sanphammoi_tiltle">
-        <h2>
-            <a href="#">Bạn chưa đăng nhập</a>
-        </h2>
-    </div>
-    <button class="btn text-primary" routerLink="/account/signin">Chuyển tơi đăng nhập<i-bs name="arrow-right-short" width="25" height="25">
-        </i-bs></button>
-</div> -->

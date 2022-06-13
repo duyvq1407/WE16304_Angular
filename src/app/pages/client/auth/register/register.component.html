@@ -1,18 +1,40 @@
-<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-        <label for="">Name</label>
-        <input type="text" class="form-control" formControlName="name">
-        <app-show-validate [field]="userForm.get('name')" key="Tên sản phẩm"></app-show-validate>
+<div class="layout-account">
+    <div class="container sanphammoi">
+        <div class="row">
+            <div class="col-5 layout-account-left">
+                <div class="sanphammoi_tiltle my-5">
+                    <h2>
+                        <a routerLink="#">Đăng ký</a>
+                    </h2>
+                </div>
+            </div>
+            <div class="col-7 layout-account-right my-5">
+                <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group mx-5 my-3">
+                        <label for="">Name</label>
+                        <input type="text" class="form-control" formControlName="name">
+                        <app-show-validate [field]="userForm.get('name')" key="Tên sản phẩm"></app-show-validate>
+                    </div>
+                    <div class="form-group mx-5 my-3">
+                        <label for="">Email</label>
+                        <input type="email" class="form-control" formControlName="email">
+                        <app-show-validate [field]="userForm.get('email')" key="Email"></app-show-validate>
+                    </div>
+                    <div class="form-group mx-5 my-3">
+                        <label for="">Password</label>
+                        <input type="password" class="form-control" formControlName="password">
+                        <app-show-validate [field]="userForm.get('password')" key="Mật khẩu"></app-show-validate>
+                    </div>
+                    <div class="d-flex justify-content-between mx-5">
+                        <a routerLink="/signin"
+                            class="d-flex align-items-center">
+                            <i-bs name="arrow-left" width="20" height="20">
+                            </i-bs> <span class="ml-1"> Quay lại đăng nhập</span>
+                        </a>
+                        <button [disabled]="!userForm.valid" class="mt-1 btn btn-success">Đăng ký</button>
+                    </div>
+                </form>    
+            </div>
+        </div>
     </div>
-    <div class="form-group">
-        <label for="">Email</label>
-        <input type="email" class="form-control" formControlName="email">
-        <app-show-validate [field]="userForm.get('email')" key="Email"></app-show-validate>
-    </div>
-    <div class="form-group">
-        <label for="">Password</label>
-        <input type="password" class="form-control" formControlName="password">
-        <app-show-validate [field]="userForm.get('password')" key="Mật khẩu"></app-show-validate>
-    </div>
-    <button [disabled]="!userForm.valid" class="mt-1 btn btn-success">Submit</button>
-</form>
+</div>
