@@ -14,17 +14,17 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let book of books| slice: (page-1) * 3 : page * 3; let i = index">
+            <tr *ngFor="let book of books | paginate: { itemsPerPage: 4, currentPage: page, totalItems: books.length }; let i = index">
                 <td >{{i + 1}}</td>
                 <td [width]="250">{{book.name}}</td>
-                <td><img [src]="book.image_url" width="100"></td>
+                <td><img [src]="book.image_url" height="70"></td>
                 <td *ngFor="let category of categories" [hidden]="category._id !== book.category_id">{{category.name}}
                 </td>
-                <td>{{book.price}}</td>
+                <td>{{book.price | currency: 'VND'}}</td>
                 <td>{{book.sale_price}}%</td>
                 <td>{{book.description}}</td>
                 <td>
-                    <a [routerLink]="['/admin','books', 'edit',book._id]">
+                    <a [routerLink]="['/admin','books', 'edit',book._id]" >
                         <button class="btn btn-primary ms-1">
                             Edit
                         </button>
@@ -47,8 +47,9 @@
             </tr>
         </tbody>
     </table>
-    <div class="container d-flex justify-content-between" style="margin-bottom: 80px">
+    <div class="container d-flex align-items-center justify-content-between" style="margin-bottom: 80px">
         <button class="btn btn-primary" routerLink="/admin/books/add">Add New</button>
-        <ngb-pagination [collectionSize]="books.length" [(page)]="page" [boundaryLinks]="true"></ngb-pagination>
+        <pagination-controls (pageChange)="page = $event"></pagination-controls>
+        <!-- <ngb-pagination [collectionSize]="70" [(page)]="page" [boundaryLinks]="true"></ngb-pagination> -->
     </div>
 </div>

@@ -15,10 +15,11 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let book of cateDetail.books; let i = index">
+            <tr
+                *ngFor="let book of cateDetail.books | paginate: { itemsPerPage: 4, currentPage: page, totalItems: cateDetail.books.length }; let i = index">
                 <td>{{i + 1}}</td>
                 <td>{{book.name}}</td>
-                <td><img [src]="book.image_url" width="100"></td>
+                <td><img [src]="book.image_url" height="70"></td>
                 <td>{{cateDetail.category.name}}</td>
                 <td>{{book.price}}</td>
                 <td>{{book.sale_price}}%</td>
@@ -34,17 +35,21 @@
                     </button>
                 </td>
                 <td>
-                    <!-- <app-status [x]="book"></app-status> -->
-                    <button class="btn btn-success min-w-70px" *ngIf="book.status === 1"
+                    <app-status [x]="book" [id]="book._id!"></app-status>
+                    <!-- <button class="btn btn-success min-w-70px" *ngIf="book.status === 1"
                         (click)="onUpdatedStatus(0,book._id!)">
                         ON
                     </button>
                     <button class="btn btn-dark min-w-70px" *ngIf="book.status === 0"
                         (click)="onUpdatedStatus(1,book._id!)">
                         OFF
-                    </button>
+                    </button> -->
                 </td>
             </tr>
         </tbody>
     </table>
+    <div class="container d-flex align-items-center justify-content-between" style="margin-bottom: 80px">
+        <button class="btn btn-primary" routerLink="/admin/books/add">Add New</button>
+        <pagination-controls (pageChange)="page = $event"></pagination-controls>
+    </div>
 </div>

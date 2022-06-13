@@ -13,6 +13,7 @@ import { CategoryService } from 'src/app/services/category.service';
 export class AdminBookCateDetailComponent implements OnInit {
   cateDetail: ICategoryDetail = {category: {status: 0}, books: []}
   id: string = this.route.snapshot.params['id'];
+  page: number = 1
   constructor(
     private cateService: CategoryService,
     private bookService: BookService,

@@ -32,6 +32,7 @@ import { CategoryDetailComponent } from './pages/client/category-detail/category
 import { BookDetailComponent } from './pages/client/book-detail/book-detail.component';
 import { CartComponent } from './components/client/cart/cart.component';
 import { CartPageComponent } from './pages/cart-page/cart-page.component';
+import {NgxPaginationModule} from 'ngx-pagination';
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,6 +63,7 @@ import { CartPageComponent } from './pages/cart-page/cart-page.component';
   ],
   imports: [
     BrowserModule,
+    NgxPaginationModule,
     AppRoutingModule,
     NgbModule,
     FormsModule, 

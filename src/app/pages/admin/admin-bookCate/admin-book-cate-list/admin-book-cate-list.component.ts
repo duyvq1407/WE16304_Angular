@@ -10,6 +10,7 @@ import { CategoryService } from 'src/app/services/category.service';
 })
 export class AdminBookCateListComponent implements OnInit {
   categories: ICategory[] = [];
+  page: number =1
   constructor(
     private cateService: CategoryService,
     private toastr: ToastrService

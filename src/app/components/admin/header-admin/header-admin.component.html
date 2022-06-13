@@ -16,7 +16,7 @@
                 <button ngbDropdownItem routerLink="/"lass="mt-2 d-flex align-items-center">
                     <i-bs name="arrow-left" class="me-3" width="20" height="20"></i-bs>Back to website
                 </button>
-                <button ngbDropdownItem class="mt-2 d-flex align-items-center">
+                <button ngbDropdownItem (click)="onLogOut()" class="mt-2 d-flex align-items-center">
                     <i-bs name="power" class="me-3" width="20" height="20"></i-bs> Logout
                 </button>
             </div>

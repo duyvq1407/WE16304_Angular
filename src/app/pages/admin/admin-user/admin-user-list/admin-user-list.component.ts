@@ -10,6 +10,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class AdminUserListComponent implements OnInit {
   users: IUser[] = [];
+  page: number =1
   constructor(
     private userService: UserService,
     private toastr: ToastrService

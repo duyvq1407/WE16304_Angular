@@ -13,7 +13,7 @@ import { CategoryService } from 'src/app/services/category.service';
 export class AdminBookListComponent implements OnInit {
   books : IBook[] =[];
   categories: ICategory[] = [];
-  page: number = 0
+  page: number = 1
   constructor(
     private cateService: CategoryService,
     private bookService: BookService,
@@ -26,7 +26,6 @@ export class AdminBookListComponent implements OnInit {
     this.cateService.getCategories().subscribe((data) => {
       this.categories = data
     });
-    this.page = this.books.length
   }
 
   onGetList = () => {
