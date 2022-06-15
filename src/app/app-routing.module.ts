@@ -53,13 +53,8 @@ const routes: Routes = [
         component: RegisterComponent
       },
       {
-        path: 'categories',
-        children: [
-          {
-            path: ':id',
-            component: CategoryDetailComponent
-          }
-        ]
+        path: 'categories/:id',
+        component: CategoryDetailComponent
       }
       
     ]

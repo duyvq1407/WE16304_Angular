@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { IBookCart } from 'src/app/models/Book';
 import { LocalStorageService } from 'src/app/services/local-storage.service';
 
@@ -11,7 +12,8 @@ export class CartPageComponent implements OnInit {
   cartItems: IBookCart[] = [];
   totalPrice: number = 0
   constructor(
-    private localStorageService: LocalStorageService
+    private localStorageService: LocalStorageService,
+    private toastr: ToastrService
   ) { }
 
   ngOnInit(): void {
@@ -22,20 +24,13 @@ export class CartPageComponent implements OnInit {
   onToTalPrice(price: number, quantity: number, sale: number) : number{
     return price * quantity * ((100 - sale)/100)
   }
-  onRemoveItem(id: string){
-    this.localStorageService.removeItem(id)
-    this.totalPrice = 0
-    this.ngOnInit()
-  }
+  
   onEditCart( event: any, id: string){
     // console.log(id, event.target.value)
     this.localStorageService.editQuantityItem(id, event.target.value as number)
     this.totalPrice = 0
     this.ngOnInit()
 
-  }
-  onChange(event: any){
-    console.log(event.target.value)
   }
 
 }

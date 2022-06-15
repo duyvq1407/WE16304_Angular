@@ -13,7 +13,7 @@
           </button>
           <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
             <button ngbDropdownItem class="mt-2 d-flex align-items-center" *ngFor="let cate of categories"
-              routerLink="/categories/{{cate._id}}">
+              [routerLink]="['/categories',cate._id]">
               {{cate.name}}
             </button>
           </div>

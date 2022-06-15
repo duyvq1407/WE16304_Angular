@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import {  ToastrService } from 'ngx-toastr';
 import { IBook } from 'src/app/models/Book';
 import { BookService } from 'src/app/services/book.service';
@@ -21,6 +21,7 @@ export class BookDetailComponent implements OnInit {
     private cateService: CategoryService,
     private route : ActivatedRoute,
     private localStorageService: LocalStorageService,
+    private router: Router,
     private toastr: ToastrService
     ) { 
       this.detailBook = {
@@ -30,6 +31,7 @@ export class BookDetailComponent implements OnInit {
         price: 0,
         status: 0
       }
+      this.router.routeReuseStrategy.shouldReuseRoute = () => false;
     }
 
   ngOnInit(): void {

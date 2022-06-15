@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { Observable, Subject } from 'rxjs';
 import { IBookCart } from '../models/Book';
 
@@ -7,7 +8,9 @@ import { IBookCart } from '../models/Book';
 })
 export class LocalStorageService {
 
-  constructor() { }
+  constructor(
+    private toastr: ToastrService
+  ) { }
   
   private serviceSubject = new Subject<string>(); // vừa giống Observable có thế lắng nghe được,  vừa phát được sự kiên để lắng nghe
 
@@ -38,6 +41,7 @@ export class LocalStorageService {
     if (confirm) {
       const cartItems = JSON.parse(localStorage.getItem('cart') || '[]');
       localStorage.setItem('cart', JSON.stringify(cartItems.filter((item: IBookCart) => item._id != id)));
+      this.toastr.success("Xóa sản phẩm khỏi giỏ hàng thành công")
       this.serviceSubject.next('')  
     }
   }
