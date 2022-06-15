@@ -52,10 +52,10 @@ export class AdminBookCateFormComponent implements OnInit {
         this.redirectToList()
       })
     }
-      return this.cateService.addCategory(data).subscribe(() => {
-        this.toastr.success("Thêm thành công")
-        this.redirectToList()
-      })
+    return this.cateService.addCategory(data).subscribe(() => {
+      this.toastr.success("Thêm thành công")
+      this.redirectToList()
+    })
   }
 
 }

@@ -18,6 +18,11 @@
                 <td *ngIf="user.role == 1">Admin</td>
                 <td *ngIf="user.role == 0">Member</td>
                 <td>
+                    <a [routerLink]="['/admin','users', 'edit',user._id]">
+                        <button class="btn btn-primary ms-1">
+                            Edit
+                        </button>
+                    </a>
                     <button class="btn btn-danger ms-1" (click)="onRemoveItem(user._id!)">
                         Remove
                     </button>

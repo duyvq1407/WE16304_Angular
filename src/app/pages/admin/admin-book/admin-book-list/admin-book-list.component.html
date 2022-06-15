@@ -18,7 +18,7 @@
                 <td >{{i + 1}}</td>
                 <td [width]="250">{{book.name}}</td>
                 <td><img [src]="book.image_url" height="70"></td>
-                <td *ngFor="let category of categories" [hidden]="category._id !== book.category_id">{{category.name}}
+                <td><span *ngFor="let category of categories" [hidden]="category._id !== book.category_id">{{category.name}}</span>
                 </td>
                 <td>{{book.price | currency: 'VND'}}</td>
                 <td>{{book.sale_price}}%</td>

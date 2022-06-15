@@ -134,7 +134,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+ imports: [RouterModule.forRoot(routes, {onSameUrlNavigation: 'reload'})],
+  // imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
   providers: [CanAccessAdminGuard] // đưa vào để route bên trên có thể dùng
 })
