@@ -11,7 +11,7 @@ import { CategoryService } from 'src/app/services/category.service';
 })
 export class CategoryDetailComponent implements OnInit{
   cateDetail: ICategoryDetail = {category: {status: 0}, books: []};
-  id: string = this.route.snapshot.params['id'];
+  // id: string = this.route.snapshot.params['id'];
 
   constructor(
     
@@ -20,16 +20,19 @@ export class CategoryDetailComponent implements OnInit{
     private route : ActivatedRoute,
     private router: Router
   ) { 
-    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+    // this.router.routeReuseStrategy.shouldReuseRoute = () => false;
   }
 
   ngOnInit(): void {
-    this.onGetList(this.id)
+    this.onGetList()
   }
 
-  onGetList = (id:string) => {
-    this.cateService.getCategory(id).subscribe((data) => {
-      this.cateDetail = data
-    });
+  onGetList = () => {
+    this.route.paramMap.subscribe(params => {
+      const id = params.get('id') as string
+      this.cateService.getCategory(id).subscribe((data) => {
+        this.cateDetail = data
+      });
+    })
   }
 }

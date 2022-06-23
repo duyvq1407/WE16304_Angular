@@ -14,14 +14,12 @@ import { LocalStorageService } from 'src/app/services/local-storage.service';
 export class BookDetailComponent implements OnInit {
   detailBook: IBook;
   bookRelated: IBook[] = [];
-  idFromUrl: string = this.route.snapshot.params['id'];
   cartItemValue: number = 1;
   constructor(
     private bookService: BookService,
     private cateService: CategoryService,
     private route : ActivatedRoute,
     private localStorageService: LocalStorageService,
-    private router: Router,
     private toastr: ToastrService
     ) { 
       this.detailBook = {
@@ -31,16 +29,18 @@ export class BookDetailComponent implements OnInit {
         price: 0,
         status: 0
       }
-      this.router.routeReuseStrategy.shouldReuseRoute = () => false;
     }
 
   ngOnInit(): void {
-    this.bookService.getBook(this.idFromUrl).subscribe((data) => {
-      this.detailBook = data
-      this.cateService.getCategory(data.category_id!).subscribe((data2) => {
-        this.bookRelated = data2.books.filter(item => item._id != data._id)
+    this.route.paramMap.subscribe(params => {
+      const id = params.get('id') as string
+      this.bookService.getBook(id).subscribe((data) => {
+        this.detailBook = data
+        this.cateService.getCategory(data.category_id!).subscribe((data2) => {
+          this.bookRelated = data2.books.filter(item => item._id != data._id)
+        });
       });
-    });
+    })
   }
 
   onInputValueChange = (event: any) => {

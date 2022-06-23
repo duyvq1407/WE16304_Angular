@@ -208,3 +208,19 @@ a{
 .layout-account-left{
   border-right: 1px solid #d5d5d5;
 }
+
+.label-pro-sale{
+  background-color: red;
+  font-weight: bold;
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  z-index: 1;
+}
