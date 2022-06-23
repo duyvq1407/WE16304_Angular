@@ -31,8 +31,9 @@ import { AccountComponent } from './pages/client/account/account.component';
 import { CategoryDetailComponent } from './pages/client/category-detail/category-detail.component';
 import { BookDetailComponent } from './pages/client/book-detail/book-detail.component';
 import { CartComponent } from './components/client/cart/cart.component';
-import { CartPageComponent } from './pages/cart-page/cart-page.component';
+import { CartPageComponent } from './pages/client/cart-page/cart-page.component';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { SearchPageComponent } from './pages/client/search-page/search-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +60,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
     CategoryDetailComponent,
     BookDetailComponent,
     CartComponent,
-    CartPageComponent
+    CartPageComponent,
+    SearchPageComponent
   ],
   imports: [
     BrowserModule,

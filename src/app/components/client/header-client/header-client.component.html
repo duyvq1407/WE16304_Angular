@@ -1,14 +1,12 @@
 <header class="p-3 bg-white shadow-sm">
   <div class="container">
     <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-      <a routerLink="/" class="d-flex align-items-center mb-2 mb-lg-0 text-decoration-none">
-        <img src="https://seeklogo.com/images/B/book-logo-2B8BEBAFCE-seeklogo.com.png" width="60px">
-      </a>
+      <a class="navbar-brand navbar-logo" routerLink="/">Book Store.</a>
 
       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 flex-grow-1 justify-content-center mb-md-0">
         <li><a routerLink="/" class="nav-link text-black px-2">Trang chủ</a></li>
-        <div ngbDropdown class="d-inline-block d-flex align-items-center">
-          <button type="button" class="btn btn-outline-none shadow-none border-none" ngbDropdownToggle>
+        <div ngbDropdown class="nav-dropdown d-inline-block d-flex align-items-center">
+          <button class="btn-drop btn btn-outline-none shadow-none border-none" ngbDropdownToggle>
             Danh mục
           </button>
           <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
@@ -18,8 +16,8 @@
             </button>
           </div>
         </div>
-        <li><a routerLink="a" class="nav-link text-black px-2">Giới thiệu</a></li>
-        <li><a routerLink="a" class="nav-link text-black px-2">Liên hệ</a></li>
+        <li><a routerLink="#" class="nav-link text-black px-2">Giới thiệu</a></li>
+        <li><a routerLink="#" class="nav-link text-black px-2">Liên hệ</a></li>
       </ul>
 
       <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">

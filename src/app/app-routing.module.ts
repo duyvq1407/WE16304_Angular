@@ -11,7 +11,7 @@ import { AccountComponent } from './pages/client/account/account.component';
 import { LoginComponent } from './pages/client/auth/login/login.component';
 import { RegisterComponent } from './pages/client/auth/register/register.component';
 import { BookDetailComponent } from './pages/client/book-detail/book-detail.component';
-import { CartPageComponent } from './pages/cart-page/cart-page.component';
+import { CartPageComponent } from './pages/client/cart-page/cart-page.component';
 import { CategoryDetailComponent } from './pages/client/category-detail/category-detail.component';
 import { HomeComponent } from './pages/client/home/home.component';
 import { LayoutAdminComponent } from './pages/layout/layout-admin/layout-admin.component';

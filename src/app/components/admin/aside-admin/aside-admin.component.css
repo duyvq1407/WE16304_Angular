@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
 .aside-menu .menu-nav {
   margin: 0;
   list-style: none;
@@ -11,6 +12,12 @@
   padding: 0 25px;
   height: 65px;
   background: #161c25;
+}
+
+.navbar-logo{
+  color: white;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 30px;
 }
 
 .menu-text {

@@ -13,16 +13,15 @@
             </div>
             <div class="d-flex align-items-center mt-3">
                 <div class="d-flex flex-row input-quantity">
-                    <button class="btn btn-link shadow-none"
+                    <!-- <button class="btn btn-link shadow-none"
                         onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
                         <i-bs name="dash" width="20" height="20"></i-bs>
-                    </button>
-                    <input type="number" name="quantity" [value]="cartItemValue" min="1"
-                        class="shadow-none form-control" />
-                    <button class="btn btn-link shadow-none"
+                    </button> -->
+                    <input type="number" name="quantity" [value]="cartItemValue" min="1" class="shadow-none form-control" (input)="onInputValueChange($event)"/>
+                    <!-- <button class="btn btn-link shadow-none"
                         onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                         <i-bs name="plus" width="20" height="20"></i-bs>
-                    </button>
+                    </button> -->
                 </div>
                 <button class="btn btn-secondary" (click)="onAddToCart()">Add to cart</button>
             </div>
