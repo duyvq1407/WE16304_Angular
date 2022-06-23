@@ -20,8 +20,11 @@
         <li><a routerLink="#" class="nav-link text-black px-2">Liên hệ</a></li>
       </ul>
 
-      <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-        <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+      <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3 d-flex">
+        <input type="search" (input)="onInputSearch($event)" class="form-control" placeholder="Search..." aria-label="Search">
+        <button (click)="onSearch()" class="ms-2 btn btn-primary ml-1">
+          <i-bs name="search" width="17" height="17" class=""></i-bs>
+        </button>
       </form>
 
       <div class="text-end d-flex align-items-center">

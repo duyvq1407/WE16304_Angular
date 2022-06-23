@@ -27,4 +27,7 @@ export class BookService {
   editBook = (book: IBook, id: string):Observable<IBook> => {
     return this.http.put<IBook>(`${environment.books}/${id}`, book)
   }
+  searchBook = (key: string):Observable<IBook[]> => {
+    return this.http.get<IBook[]>(`${environment.books}/search?key=${key}`)
+  }
 }

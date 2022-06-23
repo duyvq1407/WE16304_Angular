@@ -27,10 +27,9 @@ export class CartPageComponent implements OnInit {
   
   onEditCart( event: any, id: string){
     // console.log(id, event.target.value)
-    this.localStorageService.editQuantityItem(id, event.target.value as number)
+    this.localStorageService.editQuantityItem(id, +event.target.value)
     this.totalPrice = 0
     this.ngOnInit()
-
   }
 
 }

@@ -58,7 +58,6 @@ export class BookDetailComponent implements OnInit {
       image_url: this.detailBook.image_url,
       quantity: +this.cartItemValue
     };
-    console.log(addItem)
     this.localStorageService.setItem(addItem)
     this.toastr.success("Thêm vào giỏ hàng thành công")
     this.cartItemValue = 1;

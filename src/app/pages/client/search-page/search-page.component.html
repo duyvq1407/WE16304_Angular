@@ -1,1 +1,26 @@
-<p>search-page works!</p>
+<div class='container' style="margin-top: 70px;">
+    <div class="row">
+        <p>Tìm thấy <span style="font-style: italic; font-weight: bold">{{books.length}} </span> kết quả cho từ khóa "
+            <span style="font-style: italic; font-weight: bold">{{q}} </span> "...
+        </p>
+        <div class="col-md-3 col-6 pro-loop" *ngFor="let item of books">
+            <div class="product">
+                <div class="product_img">
+                    <a routerLink="/books/{{item._id}}">
+                        <div class="figure">
+                            <img [src]="item.image_url" width={270} height={270} />
+                        </div>
+                    </a>
+                </div>
+                <div class="product_detail">
+                    <h3 class="product_detail-name">
+                        <a routerLink="/books/{{item._id}}">{{item.name}}</a>
+                    </h3>
+                    <div class="product_detail-price">
+                        <p>{{ item.price | currency :'VND'}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

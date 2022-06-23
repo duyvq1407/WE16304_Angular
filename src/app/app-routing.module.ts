@@ -14,6 +14,7 @@ import { BookDetailComponent } from './pages/client/book-detail/book-detail.comp
 import { CartPageComponent } from './pages/client/cart-page/cart-page.component';
 import { CategoryDetailComponent } from './pages/client/category-detail/category-detail.component';
 import { HomeComponent } from './pages/client/home/home.component';
+import { SearchPageComponent } from './pages/client/search-page/search-page.component';
 import { LayoutAdminComponent } from './pages/layout/layout-admin/layout-admin.component';
 import { LayoutClientComponent } from './pages/layout/layout-client/layout-client.component';
 import { CanAccessAdminGuard } from './services/guards/can-access-admin.guard';
@@ -28,6 +29,10 @@ const routes: Routes = [
       {
         path: '',
         component: HomeComponent
+      },
+      {
+        path: 'search',
+        component: SearchPageComponent
       },
       {
         path: 'books/:id',
